@@ -183,7 +183,7 @@ export default function VenueInfo() {
                               </li>
                               <li className="flex items-start">
                                 <Users className="h-4 w-4 mr-2 text-primary mt-0.5" />
-                                <span>Up to 300 guests total</span>
+                                <span>Up to 200 guests total</span>
                               </li>
                               <li className="flex items-start">
                                 <CheckCircle className="h-4 w-4 mr-2 text-primary mt-0.5" />
