@@ -106,7 +106,7 @@ export default function VenueInfo() {
               <TabsContent value="booking" className="space-y-6">
                 <div className="aspect-video w-full overflow-hidden rounded-lg">
                   <img
-                    src="/placeholder.svg?height=400&width=800&text=Book+Our+Space"
+                    src="https://storage.googleapis.com/msgsndr/zKYe0Y9a7aXGs5ZuM8Nd/media/6790a7d15d20c84862756c8a.jpeg"
                     alt="THE NODE venue booking"
                     className="w-full h-full object-cover"
                   />
@@ -292,22 +292,22 @@ export default function VenueInfo() {
                             <MapPin className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-0.5" />
                             <div>
                               <p className="font-medium">Address</p>
-                              <p className="text-muted-foreground">123 Creativity Lane</p>
-                              <p className="text-muted-foreground">Mindful City, MC 12345</p>
+                              <p className="text-muted-foreground">2331 N Elston</p>
+                              <p className="text-muted-foreground">Chicago, IL 60654</p>
                             </div>
                           </li>
                           <li className="flex items-center">
                             <Phone className="h-5 w-5 mr-3 text-primary flex-shrink-0" />
                             <div>
                               <p className="font-medium">Phone</p>
-                              <p className="text-muted-foreground">(555) 123-4567</p>
+                              <p className="text-muted-foreground">(480) 560-4686</p>
                             </div>
                           </li>
                           <li className="flex items-center">
                             <Mail className="h-5 w-5 mr-3 text-primary flex-shrink-0" />
                             <div>
                               <p className="font-medium">Email</p>
-                              <p className="text-muted-foreground">bookings@thenode.space</p>
+                              <p className="text-muted-foreground">bookings@thenodechicago.com</p>
                             </div>
                           </li>
                           <li className="flex items-start">
@@ -321,11 +321,15 @@ export default function VenueInfo() {
                           </li>
                         </ul>
                       </div>
-                      <div className="aspect-square w-full overflow-hidden rounded-lg">
-                        <img
-                          src="/placeholder.svg?height=400&width=400&text=Map"
-                          alt="Map location"
-                          className="w-full h-full object-cover"
+                      <div className="rounded-lg overflow-hidden shadow-lg">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.546280775901!2d-87.67842812350207!3d41.92411146253156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3007b277b13%3A0xb12eafd35a534ca8!2sThe%20Node%20Chicago!5e0!3m2!1sen!2sus!4v1744615623765!5m2!1sen!2sus"
+                          width="100%"
+                          height="450"
+                          style={{ border: 0 }}
+                          allowFullScreen
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
                         />
                       </div>
                     </div>

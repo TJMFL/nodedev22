@@ -115,7 +115,7 @@ export default function Home() {
               <div className="grid gap-8 md:grid-cols-2 items-center mb-12">
                 <div className="aspect-video w-full overflow-hidden rounded-lg">
                   <img
-                    src="/placeholder.svg?height=400&width=600&text=THE+NODE"
+                    src="https://storage.googleapis.com/msgsndr/zKYe0Y9a7aXGs5ZuM8Nd/media/678b6ea8671b4db8faee2c59.jpeg"
                     alt="THE NODE venue"
                     className="w-full h-full object-cover"
                   />
