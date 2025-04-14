@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 7%;
+  --foreground: 45 50% 98%;
+
+  --muted: 0 0% 15%;
+  --muted-foreground: 45 30% 70%;
+
+  --popover: 0 0% 9%;
+  --popover-foreground: 45 50% 98%;
+
+  --card: 0 0% 10%;
+  --card-foreground: 45 50% 98%;
+
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+
+  --primary: 45 80% 60%;
+  --primary-foreground: 0 0% 0%;
+
+  --secondary: 45 60% 40%;
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 45 70% 50%;
+  --accent-foreground: 0 0% 0%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --ring: 45 80% 60%;
+
+  --radius: 0.5rem;
+
+  --gradient-start: 0 0% 5%;
+  --gradient-end: 0 0% 10%;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+.dark {
+  --background: 0 0% 7%;
+  --foreground: 45 50% 98%;
+
+  --muted: 0 0% 15%;
+  --muted-foreground: 45 30% 70%;
+
+  --popover: 0 0% 9%;
+  --popover-foreground: 45 50% 98%;
+
+  --card: 0 0% 10%;
+  --card-foreground: 45 50% 98%;
+
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+
+  --primary: 45 80% 60%;
+  --primary-foreground: 0 0% 0%;
+
+  --secondary: 45 60% 40%;
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 45 70% 50%;
+  --accent-foreground: 0 0% 0%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --ring: 45 80% 60%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.dark-gradient-bg {
+  background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+}
+
+/* Add a gold gradient class */
+.gold-gradient {
+  background: linear-gradient(135deg, hsl(45 80% 40%) 0%, hsl(45 80% 60%) 100%);
+}
+
+/* Update the glass-effect to have a subtle gold border */
+.glass-effect {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: var(--card-shadow);
+  @apply rounded-lg;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure content doesn't shift during transitions */
+body {
+  overflow-y: scroll;
+}
+
+/* Improve animation performance */
+* {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Prevent layout shifts during transitions */
+main {
+  min-height: calc(100vh - 64px - 56px); /* Adjust based on your header and navigation heights */
+}
+
+/* Respect user's reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+.h1 {
+  @apply text-4xl font-extrabold tracking-tight;
+}
+.h2 {
+  @apply text-3xl font-semibold tracking-tight;
+}
+.h3 {
+  @apply text-2xl font-semibold tracking-tight;
+}
+.h4 {
+  @apply text-xl font-semibold tracking-tight;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 ease-in-out;
+}
+.hover-lift:hover {
+  @apply -translate-y-1;
+}
+
+.progress-ring {
+  @apply relative inline-flex;
+}
+.progress-ring circle {
+  @apply transition-all duration-300 ease-in-out;
+}
