@@ -1,3 +1,5 @@
+"use client"
+
 import CommunityHub from "../components/CommunityHub"
 
 export default function CommunityPage() {
